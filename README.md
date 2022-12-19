@@ -37,5 +37,5 @@ docker run -dp 4300:443 uws-http3
 - Open VSCode
 - On notification panel opens notify about
   there "Devcontainer configuration file",
-  click to "Reopen in Container"
+  click to _Reopen in Container_ **OR** choose _Dev Containers: Reopen in Container_ from Command palette
 - That's done
