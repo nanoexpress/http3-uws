@@ -32,6 +32,12 @@ docker build -t uws-http3 .
 docker run -dp 4300:443 uws-http3
 ```
 
+### Docker Compose Running
+
+```sh
+docker-compose up -d
+```
+
 ### VSCode Running
 
 - Open VSCode
