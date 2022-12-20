@@ -5,12 +5,16 @@
   "main": "src/http3.js",
   "type": "module",
   "scripts": {
-    "start": "node src/http3.js"
+    "start": "node src/http3.js",
+    "dev": "nodemon src/http3.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "uWebSockets.js": "uNetworking/uWebSockets.js#v20.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }

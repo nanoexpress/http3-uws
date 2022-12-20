@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  uws:
+    build:
+      context: .
+    security_opt:
+      - seccomp:unconfined
+    container_name: docker-uws-demo
+    restart: always
+    ports:
+      - "4300:443"
+    environment:
+      - "NODE_ENV=development"
+    networks:
+      - demo-connect
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules # Remove this if you have pure JS dependencies
+
+networks:
+  demo-connect:
+    driver: bridge

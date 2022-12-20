@@ -1,16 +1,11 @@
-FROM node:16
+FROM sitespeedio/node:ubuntu-22.04-nodejs-18.12.1
 
-# Create app directory
 WORKDIR /usr/src/app
+COPY . /usr/src/app
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
-COPY package*.json /usr/src/app/
-COPY src /usr/src/app/
-COPY package*.json /usr/src/app/
+ENV PORT=443
 
 RUN npm install
 
 EXPOSE 443
-CMD [ "node", "http3.js" ]
+CMD [ "npm", "run", "dev" ]
