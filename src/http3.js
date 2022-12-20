@@ -11,7 +11,8 @@ const port = Number(process.env.PORT || 443);
 const app = uWS
   .H3App({
     key_file_name: path.resolve('misc/key.pem'),
-    cert_file_name: path.resolve('misc/cert.pem')
+    cert_file_name: path.resolve('misc/cert.pem'),
+    passphrase: '1234'
   })
   .get("/*", (res, req) => {
     res.end("H3llo World!");
