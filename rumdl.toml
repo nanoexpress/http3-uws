@@ -1,0 +1,7 @@
+# Markdown lint/format (replaces Prettier for .md files)
+# https://rumdl.dev/configuration
+[global]
+include = ["*.md"]
+
+# Long benchmark-output lines in code blocks are intentional
+disable = ["MD013"]
